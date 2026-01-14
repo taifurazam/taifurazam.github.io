@@ -1,41 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Md Taifur Azam Mojumder</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+    :root{
+      --text:#111827;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f5f7fb;
+      --border:#e5e7eb;
+      --accent:#0a66c2;
     }
-    h1 {
-      color: #0a66c2;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+    header{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .title h1{
+      margin:0;
+      font-size: 28px;
+      letter-spacing: .2px;
+    }
+    .subtitle{
+      margin-top:6px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .pill-row{
+      margin-top:14px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+    }
+    @media (min-width: 760px){
+      .grid{grid-template-columns: 1.2fr .8fr;}
+    }
+    h2{
+      margin:0 0 10px;
+      font-size: 16px;
+      letter-spacing:.2px;
+    }
+    p{margin:0 0 10px}
+    a{
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover{text-decoration: underline;}
+    .box{
+      border:1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      background:#fff;
+    }
+    .list{
+      margin:0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contact{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      font-size:14px;
+      color: var(--muted);
+    }
+    .contact strong{
+      color: var(--text);
+      font-weight: 600;
+    }
+    .btn-row{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:14px;
+    }
+    .btn.primary{
+      background: var(--accent);
+      color:#fff;
+      border-color: var(--accent);
+    }
+    footer{
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align:center;
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="title">
+          <h1>Md Taifur Azam Mojumder</h1>
+          <div class="subtitle">
+            M.Sc. Economic Policy Analysis (OVGU) · English (C1) · German (B2)
+          </div>
+          <div class="pill-row">
+            <span class="pill">Policy & Research</span>
+            <span class="pill">Data (Excel · SQL · Power BI)</span>
+            <span class="pill">Web & Communication</span>
+          </div>
+        </div>
+      </header>
 
-  <h1>Md Taifur Azam Mojumder</h1>
+      <div class="grid">
+        <section class="box">
+          <h2>About</h2>
+          <p>
+            I’m a Master’s student at Otto-von-Guericke University Magdeburg with interests in
+            policy analysis, research, and data-driven decision-making.
+          </p>
+          <p>
+            I enjoy working on structured projects, communication tasks, and practical problem-solving.
+          </p>
 
-  <p>
-    Master’s student in Economic Policy Analysis at Otto-von-Guericke University Magdeburg.
-  </p>
+          <h2 style="margin-top:14px;">Focus</h2>
+          <ul class="list">
+            <li>Economic policy analysis & research support</li>
+            <li>Data work: Excel, SQL, SPSS, Power BI (basic DAX)</li>
+            <li>Digital content: basic web, Canva / Adobe</li>
+          </ul>
+        </section>
 
-  <p>
-    Interests: Policy analysis, research, data, and international cooperation.
-  </p>
+        <aside class="box">
+          <h2>Contact</h2>
+          <div class="contact">
+            <div><strong>Email:</strong> <a href="mailto:md.mojumder@st.ovgu.de">md.mojumder@st.ovgu.de</a></div>
+            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/taifurazam" target="_blank" rel="noreferrer">linkedin.com/in/taifurazam</a></div>
+            <div><strong>Location:</strong> Magdeburg, Germany</div>
+          </div>
 
-  <p>
-    📧 Email: md.mojumder@st.ovgu.de  
-    <br>
-    🔗 LinkedIn: <a href="https://www.linkedin.com/in/taifurazam" target="_blank">
-      linkedin.com/in/taifurazam
-    </a>
-  </p>
+          <div class="btn-row">
+            <a class="btn primary" href="https://www.linkedin.com/in/taifurazam" target="_blank" rel="noreferrer">View LinkedIn</a>
+            <a class="btn" href="mailto:md.mojumder@st.ovgu.de">Email me</a>
+          </div>
+        </aside>
+      </div>
 
+      <footer>
+        © <span id="y"></span> Md Taifur Azam Mojumder
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
